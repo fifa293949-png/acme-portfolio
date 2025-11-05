@@ -2,6 +2,10 @@
 @import url('reset.css');
 
 :root{
+    /* Layout */
+  --base-unit:27px;
+  --container: 1272px;
+
     /* Color styles */
   --light-gray: rgba(235, 235, 235, 1);
   --medium-gray: rgba(168, 168, 168, 1);
@@ -13,19 +17,42 @@
 
   /* Text-size styles */
   --body--ff:"Open Sans", sans-serif;
-  --banner--tt: 54px;
-  --section--tt: 32px;
-  --content--tt: 24px;
   --body: 16px;
-  --body--link: 16px;
-  --section--desc: 18px;
+  --banner--tt: calc(var(--base-unit) * 2);
+  --section--tt: calc(var(--body) * 2);
+  --content--tt: calc(var(--body) * 1.5);
+  --body--link: var(--body);
+  --section--desc:calc(var(--body) * 1.125);
 }
 /* typography */
 body{
+  /* 
   font-family: var(--body--ff);
+  font-size: var(--body);
+  line-height:var(--base-unit); 
+  */
+  font: var(--body)/var(--base-unit) var(--body--ff);
 }
-
-
+.banner_tt{
+  font-size: var(--banner--tt); /* 54px */
+  line-height:var(--banner--tt);/* 54px */
+}
+.section_tt{
+  font-size: var(--section--tt);
+}
+.content_tt{
+  font-size: var(--content--tt);
+}
+.link{
+  text-decoration:underline;
+}
+/* colors */
+.primary{
+  color: var(--primary);
+}
+.secondary{
+  color: var(--secondary);
+}
 
 
 
